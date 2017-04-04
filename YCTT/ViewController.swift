@@ -28,8 +28,39 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var userClass = ""
     
+    // anchor date
+    let fixedDate = NSDate(dateString: "2017-03-13")
+    // anchor alphabetical date
+    let fixedDay = "C"
+    // today's date
+    let todayDate = NSDate()
+    // access to all calendars
+    let calendar = NSCalendar.current
+    // variable to store numerical representation of today's alphabetical day (A=0, B=1,...,F=5)
+    var dateDiffNum = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set the time of each day to 00:00:00 for ease of calculation
+        let date1 = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: fixedDate as Date)
+        let date2 = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: todayDate as Date)
+        
+        // subtract number of holidays past from dateDifference
+        var dateDifference = calendar.dateComponents([Calendar.Component.day], from: date1!, to: date2!).day!
+        
+        // compare the today's date with holidayDatesArray and subtract the number of holidays past
+        var holidayDatesFilteredArray: [Date] = []
+        for holidayDate in ArrayFile.holidayDatesArray {
+            if calendar.dateComponents([Calendar.Component.day], from: date2!, to: holidayDate!).day! < 0 {
+                holidayDatesFilteredArray.append(holidayDate!)
+            }
+        }
+        dateDifference -= holidayDatesFilteredArray.count
+        
+        // convert the date difference into day difference, then that into a corresponding integer
+        dateDiffNum = DayCheckHelper.dayToNumber(DateHelper.calcDateDifference(dateDifference))
+        
         navigationController?.navigationBar.barTintColor = UIColor(red: 242.0/255.0, green: 129.0/255.0, blue: 55.0/255.0, alpha: 1.0)
         navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -62,8 +93,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             selectedDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 25.0)
             todayDayConstraintHeight.constant = 30
             pickerViewHeight.constant = 150
-        } else if UIScreen.main.bounds.height == 1024 {
-            title1Label.font = UIFont(name: "RobotoSlab-Regular", size: 45.0)
+        } else if UIScreen.main.bounds.height == 480 /*1024*/ {
+            title1Label.font = UIFont(name: "RobotoSlab-Regular", size: 25.0)
+            title2Label.font = UIFont(name: "RobotoSlab-Regular", size: 29.0)
+            todayDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 19.0)
+            selectDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 19.0)
+            selectedDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 19.0)
+            todayDayConstraintHeight.constant = 5
+            pickerViewHeight.constant = 100
+
+            /*title1Label.font = UIFont(name: "RobotoSlab-Regular", size: 45.0)
             title2Label.font = UIFont(name: "RobotoSlab-Regular", size: 60.0)
             todayDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 40.0)
             selectDayLabel.font = UIFont(name: "RobotoSlab-Regular", size: 40.0)
@@ -75,7 +114,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             selectBtnDistanceConstraint.constant = 60
             selectBtn.titleLabel!.font = UIFont(name: "RobotoSlab-Regular", size: 40.0)
             logOutBottomDistance.constant = 50
-            logOutBtn.titleLabel!.font = UIFont(name: "RobotoSlab-Regular", size: 40.0)
+            logOutBtn.titleLabel!.font = UIFont(name: "RobotoSlab-Regular", size: 40.0)*/
         } else if UIScreen.main.bounds.height == 1366 {
             title1Label.font = UIFont(name: "RobotoSlab-Regular", size: 51.0)
             title2Label.font = UIFont(name: "RobotoSlab-Regular", size: 76.0)
@@ -93,6 +132,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.dayPicker.selectRow(dateDiffNum, inComponent: 0, animated: false)
+        DayCheckHelper.changedDate(ArrayFile.dayArray[dateDiffNum])
+        selectedDayLabel.text = DayCheckHelper.currentDay
+    }
+    
     override var shouldAutorotate : Bool {
         return false
     }
@@ -135,7 +182,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        DayCheckHelper.changdeDate(ArrayFile.dayArray[row])
+        DayCheckHelper.changedDate(ArrayFile.dayArray[row])
         selectedDayLabel.text = DayCheckHelper.currentDay
         print(DayCheckHelper.currentDay)
     }
@@ -267,4 +314,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return true
     }
 
+}
+extension NSDate
+{
+    convenience
+    init(dateString:String) {
+        let dateStringFormatter = DateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd"
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        let d = dateStringFormatter.date(from: dateString)!
+        self.init(timeInterval:0, since:d)
+    }
 }

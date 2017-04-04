@@ -91,15 +91,23 @@ class PstudySelectViewController: UIViewController, UIPickerViewDelegate, UIPick
             saveBtnWidth.constant = 80
             saveBtnHeight.constant = 55
             saveBtnDistance.constant = 80
-        } else if UIScreen.main.bounds.height == 1024 {
-            selectLabel.font = UIFont(name: "RobotoSlab-Regular", size: 30.0)
+        } else if UIScreen.main.bounds.height == 480 /*1024*/ {
+            selectLabel.font = UIFont(name: "RobotoSlab-Regular", size: 19.0)
+            P1Label.font = UIFont(name: "RobotoSlab-Regular", size: 14.0)
+            P2Label.font = UIFont(name: "RobotoSlab-Regular", size: 14.0)
+            P3Label.font = UIFont(name: "RobotoSlab-Regular", size: 14.0)
+            saveBtn.titleLabel!.font = UIFont(name: "RobotoSlab-Regular", size: 14.0)
+            saveBtnWidth.constant = 42
+            saveBtnHeight.constant = 24
+            saveBtnDistance.constant = 0
+            /*selectLabel.font = UIFont(name: "RobotoSlab-Regular", size: 30.0)
             P1Label.font = UIFont(name: "RobotoSlab-Regular", size: 20.0)
             P2Label.font = UIFont(name: "RobotoSlab-Regular", size: 20.0)
             P3Label.font = UIFont(name: "RobotoSlab-Regular", size: 20.0)
             saveBtn.titleLabel!.font = UIFont(name: "RobotoSlab-Regular", size: 25.0)
             saveBtnWidth.constant = 80
             saveBtnHeight.constant = 55
-//            saveBtnDistance.constant = 60
+//            saveBtnDistance.constant = 60*/
         } else if UIScreen.main.bounds.height == 1366 {
             selectLabel.font = UIFont(name: "RobotoSlab-Regular", size: 30.0)
             P1Label.font = UIFont(name: "RobotoSlab-Regular", size: 23.0)

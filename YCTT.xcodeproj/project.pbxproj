@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		09D34B01363FA4F9818BFF81 /* Pods_YCTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDF44559B97B84730BA2F3B /* Pods_YCTT.framework */; };
+		FB08CFE11E4DC97C00613C64 /* SportsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08CFE01E4DC97C00613C64 /* SportsScheduleTableViewCell.swift */; };
+		FB08CFE31E4DC99D00613C64 /* SportsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08CFE21E4DC99D00613C64 /* SportsScheduleTableViewController.swift */; };
+		FB08CFE51E4DCAA000613C64 /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08CFE41E4DCAA000613C64 /* Sports.swift */; };
 		FB7204961DA621CF009D9565 /* LunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7204951DA621CF009D9565 /* LunchMenu.swift */; };
 		FB7204981DA63DB8009D9565 /* LunchMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7204971DA63DB8009D9565 /* LunchMenuTableViewController.swift */; };
 		FB72049A1DA63DCF009D9565 /* LunchMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7204991DA63DCF009D9565 /* LunchMenuTableViewCell.swift */; };
@@ -40,12 +43,17 @@
 		FBC1573D1DA6146C0084625A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC157211DA6146C0084625A /* User.swift */; };
 		FBC1573E1DA6146C0084625A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC157221DA6146C0084625A /* UserInfoViewController.swift */; };
 		FBC1573F1DA6146C0084625A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC157231DA6146C0084625A /* ViewController.swift */; };
+		FBDBE1011E499DCE00C8DBA8 /* MockExamScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE1001E499DCE00C8DBA8 /* MockExamScheduleTableViewController.swift */; };
+		FBDBE1031E499F2700C8DBA8 /* MockExamScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE1021E499F2700C8DBA8 /* MockExamScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B98B26DC840DA2983E0A275 /* Pods-YCTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YCTT/Pods-YCTT.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDF44559B97B84730BA2F3B /* Pods_YCTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YCTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D8E96ECE427505D1CE80E3 /* Pods-YCTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-YCTT/Pods-YCTT.release.xcconfig"; sourceTree = "<group>"; };
+		FB08CFE01E4DC97C00613C64 /* SportsScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		FB08CFE21E4DC99D00613C64 /* SportsScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsScheduleTableViewController.swift; sourceTree = "<group>"; };
+		FB08CFE41E4DCAA000613C64 /* Sports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sports.swift; sourceTree = "<group>"; };
 		FB7204951DA621CF009D9565 /* LunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchMenu.swift; sourceTree = "<group>"; };
 		FB7204971DA63DB8009D9565 /* LunchMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchMenuTableViewController.swift; sourceTree = "<group>"; };
 		FB7204991DA63DCF009D9565 /* LunchMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +88,8 @@
 		FBC157211DA6146C0084625A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FBC157221DA6146C0084625A /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		FBC157231DA6146C0084625A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBDBE1001E499DCE00C8DBA8 /* MockExamScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExamScheduleTableViewController.swift; sourceTree = "<group>"; };
+		FBDBE1021E499F2700C8DBA8 /* MockExamScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExamScheduleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,8 @@
 				FBC1571A1DA6146C0084625A /* StaffEmailTableViewCell.swift */,
 				FBC157191DA6146C0084625A /* SendEmailButton.swift */,
 				FB7204991DA63DCF009D9565 /* LunchMenuTableViewCell.swift */,
+				FBDBE1021E499F2700C8DBA8 /* MockExamScheduleTableViewCell.swift */,
+				FB08CFE01E4DC97C00613C64 /* SportsScheduleTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 				FBC157211DA6146C0084625A /* User.swift */,
 				FBC1571C1DA6146C0084625A /* Subject.swift */,
 				FB7204951DA621CF009D9565 /* LunchMenu.swift */,
+				FB08CFE41E4DCAA000613C64 /* Sports.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,6 +210,8 @@
 				FBC157061DA6146C0084625A /* AllTimeTableCollectionViewController.swift */,
 				FB7204971DA63DB8009D9565 /* LunchMenuTableViewController.swift */,
 				FBC1571B1DA6146C0084625A /* StaffEmailTableViewController.swift */,
+				FBDBE1001E499DCE00C8DBA8 /* MockExamScheduleTableViewController.swift */,
+				FB08CFE21E4DC99D00613C64 /* SportsScheduleTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +251,7 @@
 				TargetAttributes = {
 					FBC156EF1DA614510084625A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = V49CRUX3Q9;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -332,15 +348,19 @@
 				FBC1573C1DA6146C0084625A /* TimeTableTableViewController.swift in Sources */,
 				FBC157301DA6146C0084625A /* ElectiveIGCSETableViewController.swift in Sources */,
 				FBC1573F1DA6146C0084625A /* ViewController.swift in Sources */,
+				FBDBE1011E499DCE00C8DBA8 /* MockExamScheduleTableViewController.swift in Sources */,
 				FBC1572D1DA6146C0084625A /* DayCheckHelper.swift in Sources */,
 				FBC157361DA6146C0084625A /* StaffEmailTableViewCell.swift in Sources */,
 				FBC157351DA6146C0084625A /* SendEmailButton.swift in Sources */,
+				FBDBE1031E499F2700C8DBA8 /* MockExamScheduleTableViewCell.swift in Sources */,
 				FB72049A1DA63DCF009D9565 /* LunchMenuTableViewCell.swift in Sources */,
 				FBC1573E1DA6146C0084625A /* UserInfoViewController.swift in Sources */,
 				FBC1573D1DA6146C0084625A /* User.swift in Sources */,
 				FBC1573B1DA6146C0084625A /* TimeTableTableViewCell.swift in Sources */,
 				FBC157261DA6146C0084625A /* AppDelegate.swift in Sources */,
 				FBC157371DA6146C0084625A /* StaffEmailTableViewController.swift in Sources */,
+				FB08CFE31E4DC99D00613C64 /* SportsScheduleTableViewController.swift in Sources */,
+				FB08CFE51E4DCAA000613C64 /* Sports.swift in Sources */,
 				FBC1572F1DA6146C0084625A /* ElectiveHelper.swift in Sources */,
 				FBC1572C1DA6146C0084625A /* CurrentClassViewController.swift in Sources */,
 				FBC1573A1DA6146C0084625A /* TimeCheckHelper.swift in Sources */,
@@ -349,6 +369,7 @@
 				FBC157311DA6146C0084625A /* ElectiveViewController.swift in Sources */,
 				FB72049C1DA64841009D9565 /* DateHelper.swift in Sources */,
 				FBBA0C481DCF2D590028248D /* PstudySelectViewController.swift in Sources */,
+				FB08CFE11E4DC97C00613C64 /* SportsScheduleTableViewCell.swift in Sources */,
 				FBC157381DA6146C0084625A /* Subject.swift in Sources */,
 				FB7204961DA621CF009D9565 /* LunchMenu.swift in Sources */,
 				FBC1572E1DA6146C0084625A /* EditNameViewController.swift in Sources */,
@@ -419,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -461,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -476,6 +497,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V49CRUX3Q9;
 				INFOPLIST_FILE = YCTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ycis-px.Alan.School-Timetable";
@@ -490,6 +512,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V49CRUX3Q9;
 				INFOPLIST_FILE = YCTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ycis-px.Alan.School-Timetable";

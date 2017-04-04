@@ -10,9 +10,7 @@ import Foundation
 import Parse
 
 class LunchMenu: PFObject, PFSubclassing {
-    private lazy var __once: () = {
-            self.registerSubclass()
-        }()
+    
     @NSManaged var menus: [String]?
     @NSManaged var date: Date?
     
@@ -22,10 +20,5 @@ class LunchMenu: PFObject, PFSubclassing {
     
     override init() {
         super.init()
-    }
-    
-    override class func initialize() {
-        var onceToken : Int = 0;
-        _ = self.__once
     }
 }

@@ -27,7 +27,7 @@ class LunchMenuTableViewController: UITableViewController {
         
         let lunchMenuQuery = PFQuery(className: "LunchMenu")
         
-        lunchMenuQuery.findObjectsInBackground {(result: [PFObject]?, error: NSError?) -> Void in
+        lunchMenuQuery.findObjectsInBackground {(result: [PFObject]?, error: Error?) -> Void in
             for object in result! {
                 self.lunchMenu.append(object as! LunchMenu)
             }

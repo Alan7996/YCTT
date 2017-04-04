@@ -1,0 +1,6 @@
+framework module Pods_YCTT {
+  umbrella header "Pods-YCTT-umbrella.h"
+
+  export *
+  module * { export * }
+}

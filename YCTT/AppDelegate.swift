@@ -19,12 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print(Realm.Configuration.defaultConfiguration.fileURL ?? <#default value#>)
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
         print(UIScreen.main.bounds.height)
         let startViewController: UIViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        // Register LunchMenu and Sports as PFObjects
         LunchMenu.registerSubclass()
+        Sports.registerSubclass()
         
         // Set up the Parse SDK
         let configuration = ParseClientConfiguration {
@@ -33,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: configuration)
                 
+        // create and add an empty User object to Realm to ensure there is at least one User object in Realm
         let user = User()
         
         let realm = try! Realm()
@@ -42,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let result = realm.objects(User.self).sorted(byProperty: "name", ascending: false)
         print(result)
         
+        // depending on the state of the first User object from above sort, different starting view is determined
         if result[0] != user && result[0].elective1 != "" {
             if (result[0].yearGroup == "12A" || result[0].yearGroup == "12B" || result[0].yearGroup == "12C" || result[0].yearGroup == "12D" || result[0].yearGroup == "13A" || result[0].yearGroup == "13B" || result[0].yearGroup == "13C" || result[0].yearGroup == "13D") && result[0].pstudy1 != "" {
                 startViewController = storyboard.instantiateViewController(withIdentifier: "DaySelectNavController") as! UINavigationController
