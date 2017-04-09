@@ -52,14 +52,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // compare the today's date with holidayDatesArray and subtract the number of holidays past
         var holidayDatesFilteredArray: [Date] = []
         for holidayDate in ArrayFile.holidayDatesArray {
-            if calendar.dateComponents([Calendar.Component.day], from: date2!, to: holidayDate!).day! < 0 {
+            if calendar.dateComponents([Calendar.Component.day], from: date2!, to: holidayDate!).day! <= 0 {
                 holidayDatesFilteredArray.append(holidayDate!)
             }
         }
-        dateDifference -= holidayDatesFilteredArray.count
         
         // convert the date difference into day difference, then that into a corresponding integer
         dateDiffNum = DayCheckHelper.dayToNumber(DateHelper.calcDateDifference(dateDifference))
+        dateDiffNum -= holidayDatesFilteredArray.count
+        if dateDiffNum < 0 {
+            dateDiffNum += 6
+        }
         
         navigationController?.navigationBar.barTintColor = UIColor(red: 242.0/255.0, green: 129.0/255.0, blue: 55.0/255.0, alpha: 1.0)
         navigationController?.navigationBar.tintColor = UIColor.white

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A9513F40F097E30ABCDD9B76AA8F5A65391417B4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "080BB355B30A6008D5CD9CB08E61B6CDC4CEA8FC" : 9223372036854775807,
+    "A9513F40F097E30ABCDD9B76AA8F5A65391417B4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B9F1D6B7-AF22-4A67-8F47-1004182317B4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "080BB355B30A6008D5CD9CB08E61B6CDC4CEA8FC" : "YCTT\/YCTT.xcodeproj\/",
+    "A9513F40F097E30ABCDD9B76AA8F5A65391417B4" : "YCTT\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YCTT",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YCTT.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alan7996\/YCTT.xcodeproj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "080BB355B30A6008D5CD9CB08E61B6CDC4CEA8FC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alan7996\/YCTT.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A9513F40F097E30ABCDD9B76AA8F5A65391417B4"
+    }
+  ]
+}
